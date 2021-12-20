@@ -80,7 +80,7 @@ export default function Home({ posts }) {
       <NewsLetter />
 
     </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
