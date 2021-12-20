@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsMoonFill, BsFillSunFill, BsSearch } from 'react-icons/bs';
 import { MdGpsNotFixed, MdOutlineAttachEmail } from 'react-icons/md';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -6,10 +6,40 @@ import { FiTwitter, FiInstagram } from 'react-icons/fi';
 import { AiFillFacebook, AiFillYoutube } from 'react-icons/ai';
 import { IoIosArrowDown } from 'react-icons/io'
 import Link from 'next/link';
+import { useTheme } from 'next-themes';
+import { useAuth } from '../hooks/useAuth';
 
 const Navigation = () => {
+	const { systemTheme, theme, setTheme } = useTheme();
+	const [mounted, setMounted] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
-	
+	const { contexts } = useAuth();
+	const { user } = contexts;
+
+
+
+	useEffect(() => {
+		setMounted(true)
+	}, []);
+
+	const renderThemeChanger = () => {
+		if (!mounted) return null;
+		const currentTheme = theme === 'system' ? systemTheme : theme;
+
+		if (currentTheme === 'dark') {
+			return (
+				<BsFillSunFill className="w-7 h-7" role="button" onClick={() => setTheme('light')} />
+			)
+		}
+		else {
+			return (
+				<BsMoonFill className="w-7 h-7" role="button" onClick={() => setTheme('dark')} />
+			)
+		}
+	}
+
+
 
 
 
@@ -42,7 +72,7 @@ const Navigation = () => {
 							<input type="password" name="email" placeholder='Search' className="bg-gray-50 dark:bg-gray-700 outline-none text-sm flex-1" />
 						</div>
 
-						<div className='grid grid-cols-4 gap-3 mt-2'>
+						<div className='grid grid-cols-4 gap-3 mt-2 justify-center items-center'>
 							<ul>
 								<a href="#"><FiTwitter /></a>
 							</ul>
@@ -53,8 +83,13 @@ const Navigation = () => {
 								<a href="#"><AiFillYoutube /></a>
 							</ul>
 							<ul>
-								<a href="#"><FiInstagram /></a>
+								<li
+									className="lg:inline-flex lg:w-auto w-1/6 p-1 rounded text-gray-400 items-center justify-center hover:bg-gray-500 hover:text-white">
+									{renderThemeChanger()}
+								</li>
 							</ul>
+						
+
 						</div>
 					</div>
 				</div>
