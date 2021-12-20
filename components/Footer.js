@@ -8,7 +8,7 @@ import { AiFillFacebook, AiFillYoutube } from 'react-icons/ai';
 const Footer = () => {
 	return (
 		<>
-			<footer class="footer-1 bg-gray-100 py-8 sm:py-12">
+			<footer className="footer-1 bg-gray-100 py-8 sm:py-12">
 				<div className=" dark:bg-gray-700 text-black px-6 lg:px-8 py-12">
 					<div className="flex justify-between">
 						<div className="flex justify-center items-center">
@@ -23,45 +23,45 @@ const Footer = () => {
 
 				</div>
 
-				<div class="container mx-auto px-4 border-t-2">
-					<div class="sm:flex sm:flex-wrap sm:-mx-4 md:py-4">
-						<div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
-							<h5 class="text-xl font-bold mb-6">Atlas</h5>
-							<ul class="list-none footer-links">
-								<li class="mb-2">
-									<a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Homepage</a>
+				<div className="container mx-auto px-4 border-t-2">
+					<div className="sm:flex sm:flex-wrap sm:-mx-4 md:py-4">
+						<div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
+							<h5 className="text-xl font-bold mb-6">Atlas</h5>
+							<ul className="list-none footer-links">
+								<li className="mb-2">
+									<a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Homepage</a>
 								</li>
-								<li class="mb-2">
-									<a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">About</a>
+								<li className="mb-2">
+									<a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">About</a>
 								</li>
-								<li class="mb-2">
-									<a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Contact</a>
+								<li className="mb-2">
+									<a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Contact</a>
 								</li>
-								<li class="mb-2">
-									<a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Article Page</a>
+								<li className="mb-2">
+									<a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Article Page</a>
 								</li>
 
 							</ul>
 						</div>
-						<div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">
-							<h5 class="text-xl font-bold mb-6">Resources</h5>
-							<ul class="list-none footer-links">
-								<li class="mb-2">
-									<a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource</a>
+						<div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">
+							<h5 className="text-xl font-bold mb-6">Resources</h5>
+							<ul className="list-none footer-links">
+								<li className="mb-2">
+									<a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource</a>
 								</li>
-								<li class="mb-2">
-									<a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource name</a>
+								<li className="mb-2">
+									<a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource name</a>
 								</li>
-								<li class="mb-2">
-									<a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Another resource</a>
+								<li className="mb-2">
+									<a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Another resource</a>
 								</li>
-								<li class="mb-2">
-									<a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Final resource</a>
+								<li className="mb-2">
+									<a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Final resource</a>
 								</li>
 							</ul>
 						</div>
 
-						<div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0 ">
+						<div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0 ">
 							<div className="flex justify-center items-center">
 								<p className="m-4 "><MdOutlineAttachEmail className='border-2 border-blue-500 bg-blue-900 text-white  rounded text-4xl	' /></p>
 								<p className='font-bold'>Join the newsletter and read the new posts first</p>

@@ -21,10 +21,6 @@ const PopularPost = ({ post }) => {
 							</p>
 						</div>
 						<div className=" flex flext-start   pt-4 pb-2">
-							{/* <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"></span><span>3</span>
-						<span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"></span>
-						<span>14,2K</span> */}
-
 							<p className="flex flex-row   "><BiComment className="mt-1 font-bold" />  <span className="ml-1" > 3</span></p>
 							<p className="flex felx-row mx-4"><BsEye className="mt-1 font-bold" /> <span className="ml-1">14,2K</span></p>
 						</div>

@@ -18,7 +18,7 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navigation/>
+      {/* <Navigation/> */}
       <HeroSection/>
         <div className="flex flex-col items-center justify-center min-h-screen py-2 overflow-y-auto overflow-x-auto">
       {/**Featured Post */}
@@ -91,7 +91,7 @@ export const getStaticProps = async () => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
   const data = await res.json()
 
-  console.log(data)
+  // console.log(data)
 
   return {
     props: {
