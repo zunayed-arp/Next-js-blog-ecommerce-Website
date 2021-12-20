@@ -5,10 +5,12 @@ import RecentBlogPost from '../components/RecentBlogPost'
 import PopularPost from '../components/PopularPost'
 import Pagination from '../components/Pagination'
 import NewsLetter from '../components/NewsLetter'
+import Footer from '../components/Footer'
 
 export default function Home({ posts }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <>
+      <div className="flex flex-col items-center justify-center min-h-screen py-2 overflow-y-auto overflow-x-auto">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -51,10 +53,6 @@ export default function Home({ posts }) {
         }
       </div>
 
-
-
-
-
       {/**Recent Posts */}
 
       <div className="container mx-auto px-4 py-6 m-2 flex justify-between ">
@@ -73,14 +71,12 @@ export default function Home({ posts }) {
         }
       </div>
 
-      <Pagination/>
-      <NewsLetter/>
-
-
-
-
+      <Pagination />
+      <NewsLetter />
 
     </div>
+      <Footer />
+    </>
   )
 }
 
