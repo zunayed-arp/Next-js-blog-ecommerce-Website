@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import SingleBlog from './single_blog';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
+import BlogHomePage from '../../components/BlogHomePage';
 
 const BlogContainer = ({ posts }) => {
 	return (
@@ -16,7 +17,9 @@ const BlogContainer = ({ posts }) => {
 				{
 					posts.map((post) => {
 						return (
-							<SingleBlog key={post.title} post={post} />
+							<>
+								<SingleBlog key={post.id} post={post} />
+							</>
 						)
 					})
 				}
@@ -28,15 +31,17 @@ const BlogContainer = ({ posts }) => {
 export default BlogContainer;
 
 export const getStaticProps = async () => {
-	const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=a0622c41f629462e9922301fffcdf6c6`)
+	const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
 	const data = await res.json()
 
-	// console.log(data.articles)
+	console.log(data)
 
 	return {
 		props: {
-			posts: data.articles
+			posts: data
 		}
 	}
 
 }
+
+
