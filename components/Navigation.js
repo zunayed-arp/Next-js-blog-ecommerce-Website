@@ -5,6 +5,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { FiTwitter, FiInstagram } from 'react-icons/fi';
 import { AiFillFacebook, AiFillYoutube } from 'react-icons/ai';
 import { IoIosArrowDown } from 'react-icons/io'
+import Link from 'next/link';
 
 const Navigation = () => {
 	return (
@@ -21,8 +22,10 @@ const Navigation = () => {
 						</div>
 						<div >
 							<ul className='grid grid-cols-4 gap-4 justify-center items-center'>
-								<li className='flex justify-center items-center'>Category <IoIosArrowDown className='ml-2' /></li>
-								<li>About Me</li>
+								<Link href="/blog">
+									<a className='flex justify-center items-center'>Blog</a>
+								</Link>
+								<li className='m-2'>About</li>
 								<li>Contact </li>
 							</ul>
 						</div>
