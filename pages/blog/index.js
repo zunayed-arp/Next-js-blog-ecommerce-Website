@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import SingleBlog from './single_blog';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import BlogHomePage from '../../components/BlogHomePage';
+import SingleBlog from '../../components/SingleBlog';
 
 const BlogContainer = ({ posts }) => {
 	return (

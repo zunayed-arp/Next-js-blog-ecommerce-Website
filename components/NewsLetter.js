@@ -6,7 +6,7 @@ const NewsLetter = () => {
 		<div className="container mx-auto px-4 py-6 m-2 flex justify-between ">
 
 			<div>
-				<SiMinutemailer/>
+				<p><SiMinutemailer /> </p>
 			</div>
 
 			<div className="flex flex-row justify-center items-center mr-16">
