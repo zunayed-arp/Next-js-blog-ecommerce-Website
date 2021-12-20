@@ -6,7 +6,7 @@ import { BiComment } from 'react-icons/bi';
 import penguinImg from '../public/images/Penguin-PNG-Images.png'
 
 const BlogHomePage = ({post}) => {
-	console.log(post)
+	// console.log(post)
 	return (
 		<>
 			<Link href={`/blog/${post.id}`} >
