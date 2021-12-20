@@ -4,6 +4,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import RecentBlogPost from '../components/RecentBlogPost'
 import PopularPost from '../components/PopularPost'
 import Pagination from '../components/Pagination'
+import NewsLetter from '../components/NewsLetter'
 
 export default function Home({ posts }) {
   return (
@@ -73,6 +74,7 @@ export default function Home({ posts }) {
       </div>
 
       <Pagination/>
+      <NewsLetter/>
 
 
 
