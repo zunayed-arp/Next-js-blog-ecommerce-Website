@@ -8,10 +8,7 @@ import { AiFillFacebook, AiFillYoutube } from 'react-icons/ai';
 const Footer = () => {
 	return (
 		<>
-
-
 			<footer class="footer-1 bg-gray-100 py-8 sm:py-12">
-
 				<div className="bg-gray-200 dark:bg-gray-700 text-black px-6 lg:px-8 py-12">
 					<div className="flex justify-between">
 						<div className="flex justify-center items-center">
@@ -43,7 +40,7 @@ const Footer = () => {
 								<li class="mb-2">
 									<a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Article Page</a>
 								</li>
-								
+
 							</ul>
 						</div>
 						<div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">
@@ -94,18 +91,7 @@ const Footer = () => {
 						</ul>
 					</div>
 				</div>
-
-
 			</footer>
-
-			
-
-
-
-
-
-
-
 		</>
 	);
 };

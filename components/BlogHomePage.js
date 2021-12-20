@@ -11,7 +11,7 @@ const BlogHomePage = ({post}) => {
 		<>
 			<Link href={`/blog/${post.id}`} >
 				<a>
-					<div className="rounded overflow-hidden p-4 ">
+					<div className="rounded border-2 p-4 ">
 					<div className="w-2/6 flex justify-center items-center">
 							<Image className="object-scale-down  h-48 w-96 bg-gray-100" src={penguinImg} alt="penguin" />
 					</div>

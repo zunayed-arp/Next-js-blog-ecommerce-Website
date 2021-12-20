@@ -6,16 +6,19 @@ import PopularPost from '../components/PopularPost'
 import Pagination from '../components/Pagination'
 import NewsLetter from '../components/NewsLetter'
 import Footer from '../components/Footer'
+import HeroSection from '../components/HeroSection'
 
 export default function Home({ posts }) {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen py-2 overflow-y-auto overflow-x-auto">
+      
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <HeroSection/>
+        <div className="flex flex-col items-center justify-center min-h-screen py-2 overflow-y-auto overflow-x-auto">
       {/**Featured Post */}
       <div className="container mx-auto px-4 m-2 flex justify-between ">
         <h1 className="text-2xl">Featured Posts</h1>

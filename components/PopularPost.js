@@ -10,8 +10,8 @@ const PopularPost = ({ post }) => {
 		<>
 			<Link href={`/blog/${post.id}`} >
 				<a>
-					<div className="rounded overflow-hidden p-4 bg-gray-100">
-						<div className="w-2/6 flex justify-center items-center">
+					<div className="rounded overflow-hidden p-4 bg-gray-100 border-2">
+						<div className="w-2/6 flex justify-center items-center p-2">
 							<Image className="object-scale-down  h-48 w-96 bg-gray-100" src={penguinImg} alt="penguin" />
 						</div>
 						<div className="">
