@@ -9,7 +9,7 @@ const Footer = () => {
 	return (
 		<>
 			<footer class="footer-1 bg-gray-100 py-8 sm:py-12">
-				<div className="bg-gray-200 dark:bg-gray-700 text-black px-6 lg:px-8 py-12">
+				<div className=" dark:bg-gray-700 text-black px-6 lg:px-8 py-12">
 					<div className="flex justify-between">
 						<div className="flex justify-center items-center">
 							<p><MdGpsNotFixed className="text-3xl border rounded-full border-blue-900 bg-blue-900 text-white m-2" /></p>
@@ -74,9 +74,9 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="bg-gray-100 dark:bg-gray-700 border-t-2 text-black px-2 lg:px-8 flex justify-between">
-					<p> &copy; 2021 | All rights reserved </p>
-					<div className='grid grid-cols-4 gap-3'>
+				<div className="bg-gray-100 dark:bg-gray-700 border-t-2  text-black px-2 lg:px-8 flex justify-between">
+					<p className='mt-2'> &copy; 2021 | All rights reserved </p>
+					<div className='grid grid-cols-4 gap-3 mt-2'>
 						<ul>
 							<a href="#"><FiTwitter /></a>
 						</ul>

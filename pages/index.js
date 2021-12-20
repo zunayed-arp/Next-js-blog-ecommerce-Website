@@ -7,6 +7,7 @@ import Pagination from '../components/Pagination'
 import NewsLetter from '../components/NewsLetter'
 import Footer from '../components/Footer'
 import HeroSection from '../components/HeroSection'
+import Navigation from '../components/Navigation'
 
 export default function Home({ posts }) {
   return (
@@ -17,6 +18,7 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navigation/>
       <HeroSection/>
         <div className="flex flex-col items-center justify-center min-h-screen py-2 overflow-y-auto overflow-x-auto">
       {/**Featured Post */}
