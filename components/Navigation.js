@@ -15,7 +15,7 @@ const Navigation = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const { contexts } = useAuth();
-	const { user } = contexts;
+	const { user, logOut } = contexts;
 
 
 
@@ -57,7 +57,10 @@ const Navigation = () => {
 						<div >
 							<ul className='grid grid-cols-4 gap-4 justify-center items-center'>
 								<Link href="/blog">
-									<a className='flex justify-center items-center'>Blog</a>
+									<a >Blog</a>
+								</Link>
+								<Link href="/login">
+									<a >login</a>
 								</Link>
 								<li className='m-2'>About</li>
 								<li>Contact </li>
@@ -80,7 +83,9 @@ const Navigation = () => {
 								<a href="#"><AiFillFacebook /></a>
 							</ul>
 							<ul>
-								<a href="#"><AiFillYoutube /></a>
+								{
+									user && <button onClick={logOut}>Logout</button>
+								}
 							</ul>
 							<ul>
 								<li
@@ -88,7 +93,7 @@ const Navigation = () => {
 									{renderThemeChanger()}
 								</li>
 							</ul>
-						
+
 
 						</div>
 					</div>

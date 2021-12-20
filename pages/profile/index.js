@@ -1,11 +1,12 @@
 import React from 'react';
+import UserProfile from '../../components/UserProfile';
 
-const Login = () => {
+const ProfileDetail = () => {
 	return (
 		<div>
-			<h1>Hello</h1>
+			<UserProfile />
 		</div>
 	);
 };
 
-export default Login;
+export default ProfileDetail;
