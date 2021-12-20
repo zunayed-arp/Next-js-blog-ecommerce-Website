@@ -34,7 +34,7 @@ const Navigation = () => {
 					{/**search and social section */}
 					<div className='grid grid-cols-2 gap-8'>
 
-						<div className="bg-gray-50 dark:bg-gray-700 dark:border-2 dark:border-gray-400  w-30 p-2 flex items-center border"><BsSearch className="text-gray-100  dark:bg-gray-700 text-2xl  mr-2 " />
+						<div className="bg-gray-50 dark:bg-gray-700 dark:border-2 dark:border-gray-400  w-30 p-2 flex items-center border"><BsSearch className="text-gray-300  dark:bg-gray-700 text-2xl  mr-2 " />
 							<input type="password" name="email" placeholder='Search' className="bg-gray-50 dark:bg-gray-700 outline-none text-sm flex-1" />
 						</div>
 
