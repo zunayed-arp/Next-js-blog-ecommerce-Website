@@ -1,13 +1,20 @@
-import { connect } from "../../../utils/database";
+import clientPromise from "../../../utils/database";
 
-
-
-
-
-
-export default async function (req, res) {
-console.log(req.body)
-res.json({})
+export default async function handler(req, res) {
+	const client = await clientPromise;
+	const db = client.db("shops");
+	switch (req.method) {
+		case "POST":
+			const { product } = req.body;
+			let newProduct = await db.collection("shops").insertOne(product);
+			console.log(newProduct)
+			res.json(newProduct);
+			break;
+		case "GET":
+			const products = await db.collection("shops").find({}).toArray();
+			res.json({ status: 200, data: products });
+			break;
+	}
 }
 
 

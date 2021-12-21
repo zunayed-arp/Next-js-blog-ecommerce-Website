@@ -39,10 +39,6 @@ const Navigation = () => {
 		}
 	}
 
-
-
-
-
 	return (
 		<>
 			<div>
@@ -68,6 +64,9 @@ const Navigation = () => {
 								</Link>
 								<Link href="/shop">
 									<a >Shop</a>
+								</Link>
+								<Link href="/cart">
+									<a >Cart</a>
 								</Link>
 								<li className='m-2'>About</li>
 								<li>Contact </li>
