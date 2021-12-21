@@ -50,17 +50,24 @@ const Navigation = () => {
 				<div className="bg-gray-100 dark:bg-gray-700 border-t-2  text-black px-2 lg:px-8 flex justify-between">
 					{/**category section */}
 					<div className='flex justify-center items-center'>
-						<div className="flex justify-center items-center mr-8">
-							<p><MdGpsNotFixed className="text-3xl border rounded-full border-blue-900 bg-blue-900 text-white m-2" /></p>
-							<p className="text-3xl font-bold">Atlas</p>
-						</div>
+						<Link href="/">
+							<a>
+								<div className="flex justify-center items-center mr-8">
+									<p><MdGpsNotFixed className="text-3xl border rounded-full border-blue-900 bg-blue-900 text-white m-2" /></p>
+									<p className="text-3xl font-bold">Atlas</p>
+								</div>
+							</a>
+						</Link>
 						<div >
-							<ul className='grid grid-cols-4 gap-4 justify-center items-center'>
+							<ul className='grid grid-cols-6 gap-1 justify-center items-center'>
 								<Link href="/blog">
 									<a >Blog</a>
 								</Link>
 								<Link href="/login">
 									<a >login</a>
+								</Link>
+								<Link href="/shop">
+									<a >Shop</a>
 								</Link>
 								<li className='m-2'>About</li>
 								<li>Contact </li>
@@ -84,7 +91,9 @@ const Navigation = () => {
 							</ul>
 							<ul>
 								{
-									user && <button onClick={logOut}>Logout</button>
+									user?.displayName ? <button onClick={logOut}>Logout</button> : <ul>
+										<a href="#"><AiFillFacebook /></a>
+									</ul>
 								}
 							</ul>
 							<ul>

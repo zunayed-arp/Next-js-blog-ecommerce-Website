@@ -12,6 +12,7 @@ import { useAuth } from "../hooks/useAuth";
 
 
 const LoginPage = () => {
+	
 	const { contexts } = useAuth()
 	const {
 		sendVilifiedEmail,
@@ -64,7 +65,9 @@ const LoginPage = () => {
 									<FaFacebookF className="text-small" />
 								</button>
 								<button
-									onClick={signInWithGithub}
+									onClick={
+										signInWithGithub
+										}
 									className="border-2 border-gray-200 rounded-full p-3 mx-1"
 								>
 									<	FaGithub className="text-small" />
@@ -76,6 +79,8 @@ const LoginPage = () => {
 									<FaGoogle className="text-small" />
 								</button>
 							</div>
+
+						
 
 							<div></div>
 

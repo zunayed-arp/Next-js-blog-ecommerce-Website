@@ -10,73 +10,73 @@ import HeroSection from '../components/HeroSection'
 export default function Home({ posts }) {
   return (
     <>
-      
+
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HeroSection/>
-        <div className="flex flex-col items-center justify-center min-h-screen py-2 overflow-y-auto overflow-x-auto">
-      {/**Featured Post */}
-      <div className="container mx-auto px-4 m-2 flex justify-between ">
-        <h1 className="text-2xl">Featured Posts</h1>
-        <h1 className=" flex flex-row justify-end cursor-pointer"> <AiOutlineArrowLeft className='mt-1 opacity-25' /> <AiOutlineArrowRight className='mt-1' /> </h1>
+      <HeroSection />
+      <div className="flex flex-col items-center justify-center min-h-screen py-2 overflow-y-auto overflow-x-auto">
+        {/**Featured Post */}
+        <div className="container mx-auto px-4 m-2 flex justify-between ">
+          <h1 className="text-2xl">Featured Posts</h1>
+          <h1 className=" flex flex-row justify-end cursor-pointer"> <AiOutlineArrowLeft className='mt-1 opacity-25' /> <AiOutlineArrowRight className='mt-1' /> </h1>
+        </div>
+        <div className="grid grid-cols-3 xs:grid-cols-1 gap-4 container mx-auto px-4 xs:grid-cols-1 dark:bg-gray-900 	">
+
+          {
+            posts.slice(0, 6).map((post) => {
+              return (
+                <>
+                  <BlogHomePage key={post.id} post={post} />
+                </>
+              )
+            })
+          }
+
+        </div>
+
+
+        {/**Poular This Week */}
+        <div className="container mx-auto px-4 py-6 m-2 flex justify-between ">
+          <h1 className="text-2xl">Popular Post</h1>
+          <h1 className=" flex flex-row justify-end border p-3 "> See All </h1>
+        </div>
+        <div className="grid grid-cols-3  xs:grid-cols-1 gap-4 container mx-auto px-4 xs:grid-cols-1 dark:bg-gray-900 	">
+          {
+            posts.slice(0, 6).map((post) => {
+              return (
+                <>
+                  <PopularPost key={post.id} post={post} />
+                </>
+              )
+            })
+          }
+        </div>
+
+        {/**Recent Posts */}
+
+        <div className="container mx-auto px-4 py-6 m-2 flex justify-between ">
+          <h1 className="text-2xl">Recent Post</h1>
+          {/* <h1 className=" flex flex-row justify-end border p-3 "> See All </h1> */}
+        </div>
+        <div className="grid grid-cols-2  xs:grid-cols-1 gap-4 container mx-auto px-4 xs:grid-cols-1 dark:bg-gray-900 	">
+          {
+            posts.slice(0, 8).map((post) => {
+              return (
+                <>
+                  <RecentBlogPost key={post.id} post={post} />
+                </>
+              )
+            })
+          }
+        </div>
+
+        <Pagination />
+        <NewsLetter />
+
       </div>
-      <div className="grid grid-cols-3 xs:grid-cols-1 gap-4 container mx-auto px-4 xs:grid-cols-1 dark:bg-gray-900 	">
-
-        {
-          posts.slice(0, 6).map((post) => {
-            return (
-              <>
-                <BlogHomePage key={post.id} post={post} />
-              </>
-            )
-          })
-        }
-
-      </div>
-
-
-      {/**Poular This Week */}
-      <div className="container mx-auto px-4 py-6 m-2 flex justify-between ">
-        <h1 className="text-2xl">Popular Post</h1>
-        <h1 className=" flex flex-row justify-end border p-3 "> See All </h1>
-      </div>
-      <div className="grid grid-cols-3  xs:grid-cols-1 gap-4 container mx-auto px-4 xs:grid-cols-1 dark:bg-gray-900 	">
-        {
-          posts.slice(0, 6).map((post) => {
-            return (
-              <>
-                <PopularPost key={post.id} post={post} />
-              </>
-            )
-          })
-        }
-      </div>
-
-      {/**Recent Posts */}
-
-      <div className="container mx-auto px-4 py-6 m-2 flex justify-between ">
-        <h1 className="text-2xl">Recent Post</h1>
-        {/* <h1 className=" flex flex-row justify-end border p-3 "> See All </h1> */}
-      </div>
-      <div className="grid grid-cols-2  xs:grid-cols-1 gap-4 container mx-auto px-4 xs:grid-cols-1 dark:bg-gray-900 	">
-        {
-          posts.slice(0, 8).map((post) => {
-            return (
-              <>
-                <RecentBlogPost key={post.id} post={post} />
-              </>
-            )
-          })
-        }
-      </div>
-
-      <Pagination />
-      <NewsLetter />
-
-    </div>
     </>
   )
 }

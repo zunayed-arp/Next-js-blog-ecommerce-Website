@@ -13,6 +13,7 @@ import {
 	sendEmailVerification,
 } from "firebase/auth";
 import { firebaseInitialization } from "../firebase/firebase.init";
+import { useRouter } from "next/router";
 
 
 
@@ -23,6 +24,7 @@ const gitHubProvider = new GithubAuthProvider();
 const auth = getAuth();
 
 const useFirebase = () => {
+	const router = useRouter()
 	const [user, setUser] = useState({});
 	const [error, setError] = useState("");
 	const [email, setEmail] = useState("");
@@ -48,6 +50,7 @@ const useFirebase = () => {
 				console.log(result.user)
 				const user = result.user;
 				setUser(user);
+				router.push('/profile')
 			}).catch((error) => {
 				const errorMessage = err.message;
 				setError(errorMessage);
@@ -61,6 +64,7 @@ const useFirebase = () => {
 			.then((result) => {
 				const user = result.user;
 				setUser(user);
+				router.push('/profile')
 			})
 			.catch((err) => {
 				const errorMessage = err.message;
@@ -74,6 +78,7 @@ const useFirebase = () => {
 			.then((result) => {
 				const user = result.user;
 				setUser(user);
+				router.push('/profile')
 			})
 			.catch((err) => {
 				const errorMessage = err.message;
@@ -96,6 +101,7 @@ const useFirebase = () => {
 		signOut(auth)
 			.then((result) => {
 				setUser({});
+				router.push('/')
 			})
 			.catch((err) => {
 				setError(err.message);

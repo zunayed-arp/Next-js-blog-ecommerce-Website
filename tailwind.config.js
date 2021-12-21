@@ -9,8 +9,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      ringColor: ['hover'],
-      ringWidth: ['hover']
+     
     },
   },
   plugins: [],
