@@ -1,7 +1,28 @@
+import { responseSymbol } from 'next/dist/server/web/spec-compliant/fetch-event';
 import React from 'react';
 import ProductDisplay from '../../components/ProductDisplay';
 
 const ShopContainer = ({ products }) => {
+
+
+	// async function addToCart(product) {
+	// 	console.log(product);
+	// 	const res = await fetch("/api/shopapi/create", {
+	// 		method: "POST",
+	// 		headers: {
+	// 			"Content-Type": "application/json"
+	// 		},
+	// 		body: JSON.stringify({ product: product }),
+	// 	});
+	// 	const data = await res.json();
+	// 	return data.product;
+	// }
+
+
+
+
+
+
 	return (
 		<>
 			<div className="container mx-auto px-4 py-6 m-2 flex justify-between ">
@@ -14,9 +35,9 @@ const ShopContainer = ({ products }) => {
 
 					products.map((product) => {
 						return (
-							<ProductDisplay key={product.id} product={product}/>
+							<ProductDisplay key={product.id} product={product}  />
 
-							
+
 						)
 					})
 				}
@@ -34,7 +55,7 @@ export const getStaticProps = async () => {
 	const res = await fetch(`https://fakestoreapi.com/products`)
 	const data = await res.json()
 
-	console.log(data)
+	// console.log(data)
 
 	return {
 		props: {

@@ -5,6 +5,15 @@ import { MdRateReview } from 'react-icons/md';
 
 const ProductDetail = ({ product }) => {
 	const { id, title, price, description, category, image, rating } = product
+
+
+
+
+
+
+
+
+	
 	return (
 		<div className="grid grid-cols-2 gap-4">
 			<div>

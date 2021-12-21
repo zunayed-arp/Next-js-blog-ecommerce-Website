@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { useAuth } from '../hooks/useAuth';
 
 const ProductDisplay = ({ product }) => {
+	const { addToCart } = useAuth();
 	const { id, title, price, description, category, image, rating } = product
 	return (
 		<>
@@ -31,11 +33,11 @@ const ProductDisplay = ({ product }) => {
 						<Link href={`/shop/${id}`}>
 							<a>	<button className="bg-blue-600 dark:bg-gray-700 font-bold text-white  dark:text-gray-100 border rounded p-3" >Deatils</button></a>
 						</Link>
-						<Link href={`/shop/cart`}>
-							<a>
-								<button className="bg-blue-600 dark:bg-gray-700 font-bold text-white  dark:text-gray-100 border rounded p-3">Add To Cart</button>
-							</a>
-						</Link>
+						{/* <Link href={`/shop/cart`}>
+							<a> */}
+						<button className="bg-blue-600 dark:bg-gray-700 font-bold text-white  dark:text-gray-100 border rounded p-3" onClick={() => addToCart(product)}>Add To Cart</button>
+						{/* </a>
+						</Link> */}
 					</div>
 				</div>
 			</div>
