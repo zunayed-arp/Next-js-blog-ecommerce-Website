@@ -28,13 +28,13 @@ const CartPage = ({ productsData }) => {
 
 
 
-			<table className="table-auto">
+			<table className="table-auto dark:bg-gray-900">
 				<thead>
 					<tr>
-						<th className='bg-red-200'>Product Name</th>
-						<th className='bg-green-400'>Price</th>
-						<th className='bg-purple-200'>Category</th>
-						<th className='bg-red-500'>Payment</th>
+						<th className='bg-red-200 dark:bg-gray-900'>Product Name</th>
+						<th className='bg-green-400 dark:bg-gray-900'>Price</th>
+						<th className='bg-purple-200 dark:bg-gray-900'>Category</th>
+						<th className='bg-red-500 dark:bg-gray-900'>Payment</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -42,10 +42,10 @@ const CartPage = ({ productsData }) => {
 						products.map((product) => {
 							return (
 								<tr key={product.id}>
-									<td className='border bg-blue-300 m-4 p-3'>{product.title}</td>
-									<td className='border bg-green-500 m-4 p-3'>{product.price}</td>
-									<td className='border bg-purple-300 m-4 p-3'>{product.category}</td>
-									<td className='border bg-purple-500 m-4 p-3'>
+									<td key={product.id} className='border bg-blue-300 m-4 p-3 dark:bg-gray-900'>{product.title}</td>
+									<td key={product.id} className='border bg-green-500 m-4 p-3 dark:bg-gray-900'>{product.price}</td>
+									<td key={product.id} className='border bg-purple-300 m-4 p-3 dark:bg-gray-900'>{product.category}</td>
+									<td key={product.id} className='border bg-purple-500 m-4 p-3 dark:bg-gray-900'>
 
 										<button onClick={() => cartHandler(product)}>Checkout</button>
 									</td>

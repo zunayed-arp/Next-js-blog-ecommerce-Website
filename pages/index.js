@@ -11,7 +11,7 @@ export default function Home({ posts }) {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Job Assignment</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -27,9 +27,9 @@ export default function Home({ posts }) {
           {
             posts.slice(0, 6).map((post) => {
               return (
-                <>
+                
                   <BlogHomePage key={post.id} post={post} />
-                </>
+                
               )
             })
           }
@@ -46,9 +46,9 @@ export default function Home({ posts }) {
           {
             posts.slice(0, 6).map((post) => {
               return (
-                <>
+                
                   <PopularPost key={post.id} post={post} />
-                </>
+                
               )
             })
           }
