@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import UserProfile from '../../components/UserProfile';
+import { useAuth } from '../../hooks/useAuth';
 
 const ProfileDetail = () => {
 	// const router = useRouter();
@@ -10,9 +11,12 @@ const ProfileDetail = () => {
 	// 	}, 3000)
 	// }, [])
 
+	const {contexts} = useAuth();
+	const {user} = contexts;
+	console.log(user.uid)
 	return (
 		<div>
-			<UserProfile />
+			<UserProfile key={user.uid} />
 		</div>
 	);
 };

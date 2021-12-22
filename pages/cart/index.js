@@ -24,7 +24,7 @@ const CartPage = ({ productsData }) => {
 	// const products = productsData.data
 	// console.log(products)
 	return (
-		<div className="grid justify-center items-center m-10	">
+		<div key={'d43fgdgdi'} className="grid justify-center items-center m-10	">
 
 
 
