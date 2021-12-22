@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
-import BlogHomePage from '../../components/BlogHomePage';
 import SingleBlog from '../../components/SingleBlog';
 
 const BlogContainer = ({ posts }) => {
@@ -17,9 +16,9 @@ const BlogContainer = ({ posts }) => {
 				{
 					posts.map((post) => {
 						return (
-							<>
-								<SingleBlog key={post.id} post={post} />
-							</>
+
+							<SingleBlog key={post.id} post={post} />
+
 						)
 					})
 				}

@@ -3,7 +3,7 @@ import { SiMinutemailer } from 'react-icons/si';
 
 const NewsLetter = () => {
 	return (
-		<div className="container mx-auto px-4 py-6 m-2 flex justify-between  bg-gray-100">
+		<div className="dark:bg-gray-900 container mx-auto px-4 py-6 m-2 flex justify-between  bg-gray-100">
 
 			<div className="flex justify-center items-center ml-3">
 				<p><SiMinutemailer className="border-2 p-3 rounded-full text-white	text-6xl border-blue-900 bg-blue-900" /> </p>

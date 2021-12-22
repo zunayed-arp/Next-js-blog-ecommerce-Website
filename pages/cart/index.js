@@ -1,20 +1,23 @@
 import axios from 'axios';
 import React from 'react';
+import { useAuth } from '../../hooks/useAuth';
+
 
 const CartPage = ({ productsData }) => {
 	const products = productsData.data
-	const redirectToCheckOut = async () => {
 
-		const {
-			data: {
-				id
-			}
-		} = await axios.post('/api/checkout_sessions',{
-			items:products.map((product)=>{
-				const {id,price} = product
-			})
-		});
+	const { cartDetails, setCartDetails } = useAuth();
+
+
+
+
+	// console.log(cartDetails)
+
+
+	const cartHandler = (product) => {
+		setCartDetails(product)
 	}
+
 
 
 
@@ -44,7 +47,7 @@ const CartPage = ({ productsData }) => {
 									<td className='border bg-purple-300 m-4 p-3'>{product.category}</td>
 									<td className='border bg-purple-500 m-4 p-3'>
 
-										<button>Checkout</button>
+										<button onClick={() => cartHandler(product)}>Checkout</button>
 									</td>
 								</tr>
 							)

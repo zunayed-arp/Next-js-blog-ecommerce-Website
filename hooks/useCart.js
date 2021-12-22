@@ -3,7 +3,16 @@ import { useAuth } from "./useAuth";
 
 
 const useCart = () => {
-	
+
+	const [cartDetails, setCartDetails] = useState({})
+
+	const userDataDetails = {
+		title:'',
+		price:0,
+		image:''
+	}
+
+	// console.log(userDataDetails)
 
 	async function addToCart(product) {
 		console.log(product);
@@ -18,7 +27,7 @@ const useCart = () => {
 		return data.product;
 	}
 
-	return { addToCart };
+	return { addToCart, cartDetails, setCartDetails,userDataDetails };
 };
 
 export default useCart;

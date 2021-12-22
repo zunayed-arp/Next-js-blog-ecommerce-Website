@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import heroImg from '../public/images/assignment-img.png'
+import heroImg from '../public/images/plants/alocasia-zebrina.png';
 
 const HeroSection = () => {
 	return (

@@ -5,10 +5,10 @@ import natureImg from '../../public/images/nature.jpeg';
 const BlogDetail = ({ blog }) => {
 	const { id, title, body } = blog;
 	return (
-		<>
+		<div>
 
 			<div className="rounded overflow-hidden shadow-lg grid justify-center items-center">
-				<Image className="w-full" src={natureImg} alt="River" />
+				<img className="w-full" src={natureImg} alt="River" />
 				<div className="px-6 py-4">
 					<div className="font-bold text-xl mb-2">{title}</div>
 					<p className="text-gray-700 text-base">
@@ -22,7 +22,7 @@ const BlogDetail = ({ blog }) => {
 				</div>
 			</div>
 
-		</>
+		</div>
 	);
 };
 
