@@ -1,4 +1,3 @@
-
 import { createContext } from "react";
 import useFirebase from "../firebase/useFirebase";
 import useCart from "../hooks/useCart";

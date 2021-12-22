@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useAuth } from '../hooks/useAuth';
 
+
 const Navigation = () => {
 	const { systemTheme, theme, setTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
@@ -16,6 +17,8 @@ const Navigation = () => {
 
 	const { contexts } = useAuth();
 	const { user, logOut } = contexts;
+
+	// const { totalPrice, cartCount } = useShoppingCart()
 
 
 
@@ -83,7 +86,17 @@ const Navigation = () => {
 
 						<div className='grid grid-cols-4 gap-3 mt-2 justify-center items-center'>
 							<ul>
-								<a href="#"><FiTwitter /></a>
+								{/* <Link href="/cart">
+									<a className="flex items-center space-x-1 text-gray-700 hover:text-gray-900">
+										<div className="relative">
+											<FaShoppingCart className="w-7 h-7 flex-shrink-0" />
+										</div>
+										<p className="text-lg">
+											{formatCurrency(totalPrice)}{' '}
+											<span className="text-sm text-gray-500">({cartCount})</span>
+										</p>
+									</a>
+								</Link> */}
 							</ul>
 							<ul>
 								<a href="#"><AiFillFacebook /></a>

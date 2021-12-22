@@ -3,5 +3,6 @@ module.exports = {
 	images: {
 		domains: ['localhost', "fakestoreapi.com"],
 	},
+	webpack5: true,
 
 }

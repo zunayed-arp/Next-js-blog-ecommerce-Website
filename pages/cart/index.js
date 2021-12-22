@@ -1,8 +1,24 @@
+import axios from 'axios';
 import React from 'react';
 
 const CartPage = ({ productsData }) => {
-
 	const products = productsData.data
+	const redirectToCheckOut = async () => {
+
+		const {
+			data: {
+				id
+			}
+		} = await axios.post('/api/checkout_sessions',{
+			items:products.map((product)=>{
+				const {id,price} = product
+			})
+		});
+	}
+
+
+
+	// const products = productsData.data
 	// console.log(products)
 	return (
 		<div className="grid justify-center items-center m-10	">
@@ -22,13 +38,13 @@ const CartPage = ({ productsData }) => {
 					{
 						products.map((product) => {
 							return (
-								<tr>
+								<tr key={product.id}>
 									<td className='border bg-blue-300 m-4 p-3'>{product.title}</td>
 									<td className='border bg-green-500 m-4 p-3'>{product.price}</td>
 									<td className='border bg-purple-300 m-4 p-3'>{product.category}</td>
 									<td className='border bg-purple-500 m-4 p-3'>
 
-										<button>Payment by Stripe</button>
+										<button>Checkout</button>
 									</td>
 								</tr>
 							)
