@@ -10,19 +10,19 @@ const PopularPost = ({ post }) => {
 		<>
 			<Link href={`/blog/${post.id}`} >
 				<a>
-					<div className="rounded overflow-hidden p-4 bg-gray-100 border-2">
+					<div className="rounded dark:border-gray-600  overflow-hidden p-4 border">
 						<div className="w-2/6 flex justify-center items-center p-2">
-							<Image className="object-scale-down  h-48 w-96 bg-gray-100" src={penguinImg} alt="penguin" />
+							<Image className="object-scale-down  h-48 w-96 bg-gray-200" src={penguinImg} alt="penguin" />
 						</div>
 						<div className="">
-							<div className="font-bold text-xl mb-2">{post.title.slice(0, 20)}</div>
+							<div className="font-bold text-xl mb-2 dark:text-gray-300">{post.title.slice(0, 20)}</div>
 							<p className="text-gray-700 text-base">
 								{post.body?.slice(1, 100)}....
 							</p>
 						</div>
 						<div className=" flex flext-start   pt-4 pb-2">
-							<p className="flex flex-row   "><BiComment className="mt-1 font-bold" />  <span className="ml-1" > 3</span></p>
-							<p className="flex felx-row mx-4"><BsEye className="mt-1 font-bold" /> <span className="ml-1">14,2K</span></p>
+							<p className="flex flex-row   "><BiComment className="dark:text-gray-500 mt-1 font-bold" />  <span className="ml-1 dark:text-gray-500" > 3</span></p>
+							<p className="flex felx-row mx-4 dark:text-gray-500"><BsEye className="mt-1 font-bold dark:text-gray-500" /> <span className="ml-1 dark:text-gray-500">14,2K</span></p>
 						</div>
 					</div>
 				</a>

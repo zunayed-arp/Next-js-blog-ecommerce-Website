@@ -10,6 +10,7 @@ import { useTheme } from 'next-themes';
 import { useAuth } from '../hooks/useAuth';
 
 
+
 const Navigation = () => {
 	const { systemTheme, theme, setTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
@@ -17,10 +18,6 @@ const Navigation = () => {
 
 	const { contexts } = useAuth();
 	const { user, logOut } = contexts;
-
-	// const { totalPrice, cartCount } = useShoppingCart()
-
-
 
 	useEffect(() => {
 		setMounted(true)
@@ -46,7 +43,7 @@ const Navigation = () => {
 		<>
 			<div>
 
-				<div className="bg-gray-100 dark:bg-gray-700 border-t-2  text-black px-2 lg:px-8 flex justify-between">
+				<div className="bg-gray-100 dark:bg-gray-900 dark:text-gray-100  text-black px-2 lg:px-8 flex justify-between">
 					{/**category section */}
 					<div className='flex justify-center items-center'>
 						<Link href="/">
@@ -80,8 +77,8 @@ const Navigation = () => {
 					{/**search and social section */}
 					<div className='grid grid-cols-2 gap-8'>
 
-						<div className="bg-gray-50 dark:bg-gray-700 dark:border-2 dark:border-gray-400  w-30 p-2 flex items-center border"><BsSearch className="text-gray-300  dark:bg-gray-700 text-2xl  mr-2 " />
-							<input type="password" name="email" placeholder='Search' className="bg-gray-50 dark:bg-gray-700 outline-none text-sm flex-1" />
+						<div className="bg-gray-50 dark:bg-gray-900 dark:border dark:border-gray-700  w-25  flex items-center border"><BsSearch className="text-gray-300 ml-2	 dark:bg-gray-900 text-4xl" />
+							<input type="password" name="email" placeholder='    Search' className="bg-gray-50 dark:bg-gray-900 outline-none text-sm flex-1" />
 						</div>
 
 						<div className='grid grid-cols-4 gap-3 mt-2 justify-center items-center'>
