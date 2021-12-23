@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Link from 'next/link';
 import React from 'react';
 import { useAuth } from '../../hooks/useAuth';
 
@@ -45,10 +46,14 @@ const CartPage = ({ productsData }) => {
 									<td key={product.id} className='border bg-blue-300 m-4 p-3 dark:bg-gray-900'>{product.title}</td>
 									<td key={product.id} className='border bg-green-500 m-4 p-3 dark:bg-gray-900'>{product.price}</td>
 									<td key={product.id} className='border bg-purple-300 m-4 p-3 dark:bg-gray-900'>{product.category}</td>
-									<td key={product.id} className='border bg-purple-500 m-4 p-3 dark:bg-gray-900'>
+								<Link href="/stripepay">
+									<a>
+											<td key={product.id} className='border bg-purple-500 m-4 p-3 dark:bg-gray-900'>
 
-										<button onClick={() => cartHandler(product)}>Checkout</button>
-									</td>
+												<button onClick={() => cartHandler(product)}>Checkout</button>
+											</td>
+									</a>
+								</Link>
 								</tr>
 							)
 						})
