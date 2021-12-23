@@ -1,6 +1,8 @@
 module.exports = {
 	reactStrictMode: true,
 	images: {
+		loader: "imgix",
+		path: "https://noop/",
 		domains: ['localhost', "fakestoreapi.com",'d1wqzb5bdbcre6.cloudfront.net'],
 	},
 	webpack5: true,
@@ -16,6 +18,7 @@ module.exports = {
 			'/p/deploy-nextjs': { page: '/post', query: { title: 'deploy-nextjs' } },
 		}
 	},
+	
 
 
 }
