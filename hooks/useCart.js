@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { addToDb } from "../utils/fakeDb";
 import { useAuth } from "./useAuth";
 
 
@@ -7,15 +8,16 @@ const useCart = () => {
 	const [cartDetails, setCartDetails] = useState({})
 
 	const userDataDetails = {
-		title:'',
-		price:0,
-		image:''
+		title: '',
+		price: 0,
+		image: ''
 	}
 
 	// console.log(userDataDetails)
 
 	async function addToCart(product) {
-		console.log(product);
+		// console.log(product);
+		addToDb(product)
 		const res = await fetch("http://localhost:3000/api/shopapi/create", {
 			method: "POST",
 			headers: {
@@ -27,7 +29,7 @@ const useCart = () => {
 		return data.product;
 	}
 
-	return { addToCart, cartDetails, setCartDetails,userDataDetails };
+	return { addToCart, cartDetails, setCartDetails, userDataDetails };
 };
 
 export default useCart;
